@@ -1,0 +1,892 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>window_main</class>
+ <widget class="QMainWindow" name="window_main">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>537</width>
+    <height>476</height>
+   </rect>
+  </property>
+  <property name="mouseTracking">
+   <bool>true</bool>
+  </property>
+  <property name="windowTitle">
+   <string>Launcher_3x</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <widget class="QWidget" name="widget_main">
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);
+selection-background-color: rgb(122, 122, 122);</string>
+   </property>
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="1" column="1" colspan="3">
+     <layout class="QHBoxLayout" name="horizontalLayout_2">
+      <item>
+       <widget class="QLabel" name="label_opacity">
+        <property name="font">
+         <font>
+          <family>Segoe UI</family>
+         </font>
+        </property>
+        <property name="text">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; font-weight:600; color:#636363;&quot;&gt;Opacity&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QSlider" name="slider_opacity">
+        <property name="font">
+         <font>
+          <family>Segoe UI</family>
+         </font>
+        </property>
+        <property name="toolTip">
+         <string>Opacity</string>
+        </property>
+        <property name="statusTip">
+         <string>Opacity</string>
+        </property>
+        <property name="whatsThis">
+         <string>Opacity Level</string>
+        </property>
+        <property name="minimum">
+         <number>40</number>
+        </property>
+        <property name="maximum">
+         <number>100</number>
+        </property>
+        <property name="value">
+         <number>100</number>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="tickPosition">
+         <enum>QSlider::TicksBothSides</enum>
+        </property>
+        <property name="tickInterval">
+         <number>5</number>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLCDNumber" name="lcd_opacity">
+        <property name="font">
+         <font>
+          <family>Segoe UI</family>
+         </font>
+        </property>
+        <property name="smallDecimalPoint">
+         <bool>true</bool>
+        </property>
+        <property name="numDigits">
+         <number>3</number>
+        </property>
+        <property name="digitCount">
+         <number>3</number>
+        </property>
+        <property name="value" stdset="0">
+         <double>100.000000000000000</double>
+        </property>
+        <property name="intValue" stdset="0">
+         <number>100</number>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item row="0" column="1" colspan="3">
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <widget class="QPushButton" name="pushButton">
+        <property name="minimumSize">
+         <size>
+          <width>25</width>
+          <height>25</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>25</width>
+          <height>25</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">font: 75 10pt &quot;Segoe UI&quot;;</string>
+        </property>
+        <property name="text">
+         <string>...</string>
+        </property>
+        <property name="checkable">
+         <bool>true</bool>
+        </property>
+        <property name="flat">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="button_selectall">
+        <property name="minimumSize">
+         <size>
+          <width>55</width>
+          <height>25</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>55</width>
+          <height>25</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <family>Segoe UI</family>
+          <pointsize>8</pointsize>
+          <weight>50</weight>
+          <italic>false</italic>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(0, 0, 127);
+font: 8pt &quot;Segoe UI&quot;;</string>
+        </property>
+        <property name="text">
+         <string>ALL</string>
+        </property>
+        <property name="icon">
+         <iconset resource="launcher_3x.qrc">
+          <normaloff>:/all.png</normaloff>:/all.png</iconset>
+        </property>
+        <property name="flat">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="button_invert">
+        <property name="minimumSize">
+         <size>
+          <width>55</width>
+          <height>25</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>55</width>
+          <height>25</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <family>Segoe UI</family>
+          <pointsize>8</pointsize>
+          <weight>50</weight>
+          <italic>false</italic>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(0, 0, 127);
+font: 8pt &quot;Segoe UI&quot;;</string>
+        </property>
+        <property name="text">
+         <string>INV</string>
+        </property>
+        <property name="icon">
+         <iconset resource="launcher_3x.qrc">
+          <normaloff>:/inverse.png</normaloff>:/inverse.png</iconset>
+        </property>
+        <property name="flat">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="button_selectnone">
+        <property name="minimumSize">
+         <size>
+          <width>55</width>
+          <height>25</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>55</width>
+          <height>25</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <family>Segoe UI</family>
+          <pointsize>8</pointsize>
+          <weight>50</weight>
+          <italic>false</italic>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(0, 0, 127);
+font: 8pt &quot;Segoe UI&quot;;</string>
+        </property>
+        <property name="text">
+         <string>NON</string>
+        </property>
+        <property name="icon">
+         <iconset resource="launcher_3x.qrc">
+          <normaloff>:/none.png</normaloff>:/none.png</iconset>
+        </property>
+        <property name="flat">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer">
+        <property name="font">
+         <font>
+          <family>Segoe UI</family>
+         </font>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QPushButton" name="button_saveedits">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>65</width>
+          <height>25</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>65</width>
+          <height>25</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <family>Segoe UI</family>
+          <pointsize>8</pointsize>
+          <weight>9</weight>
+          <italic>false</italic>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">font: 75 8pt &quot;Segoe UI&quot;;
+color: rgb(255, 255, 255);</string>
+        </property>
+        <property name="text">
+         <string>*   SAVE   *</string>
+        </property>
+        <property name="flat">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer_2">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QPushButton" name="button_addapp">
+        <property name="minimumSize">
+         <size>
+          <width>90</width>
+          <height>25</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>90</width>
+          <height>25</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <family>Segoe UI</family>
+          <pointsize>8</pointsize>
+          <weight>50</weight>
+          <italic>false</italic>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(11, 143, 55);
+font: 8pt &quot;Segoe UI&quot;;</string>
+        </property>
+        <property name="text">
+         <string>Add App</string>
+        </property>
+        <property name="icon">
+         <iconset resource="launcher_3x.qrc">
+          <normaloff>:/addapp.png</normaloff>:/addapp.png</iconset>
+        </property>
+        <property name="flat">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="button_addgroup">
+        <property name="minimumSize">
+         <size>
+          <width>90</width>
+          <height>25</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>90</width>
+          <height>25</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <family>Segoe UI</family>
+          <pointsize>8</pointsize>
+          <weight>50</weight>
+          <italic>false</italic>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(11, 143, 55);
+font: 8pt &quot;Segoe UI&quot;;</string>
+        </property>
+        <property name="text">
+         <string>Add Group</string>
+        </property>
+        <property name="icon">
+         <iconset resource="launcher_3x.qrc">
+          <normaloff>:/addgroup.png</normaloff>:/addgroup.png</iconset>
+        </property>
+        <property name="flat">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item row="4" column="1" colspan="3">
+     <widget class="QPushButton" name="button_launch">
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>35</height>
+       </size>
+      </property>
+      <property name="font">
+       <font>
+        <family>Segoe UI 12</family>
+        <pointsize>12</pointsize>
+        <weight>50</weight>
+        <italic>false</italic>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="mouseTracking">
+       <bool>true</bool>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 12pt &quot;Segoe UI&quot; bold;
+background-color: rgb(255, 255, 255);
+color: rgb(255, 85, 0);</string>
+      </property>
+      <property name="text">
+       <string>- LAUNCH -</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="2">
+     <widget class="QTreeWidget" name="treeview_applist">
+      <property name="font">
+       <font>
+        <family>Segoe UI</family>
+       </font>
+      </property>
+      <property name="contextMenuPolicy">
+       <enum>Qt::ActionsContextMenu</enum>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::NoFrame</enum>
+      </property>
+      <property name="horizontalScrollBarPolicy">
+       <enum>Qt::ScrollBarAlwaysOff</enum>
+      </property>
+      <property name="editTriggers">
+       <set>QAbstractItemView::NoEditTriggers</set>
+      </property>
+      <property name="dragDropMode">
+       <enum>QAbstractItemView::InternalMove</enum>
+      </property>
+      <property name="selectionMode">
+       <enum>QAbstractItemView::MultiSelection</enum>
+      </property>
+      <property name="verticalScrollMode">
+       <enum>QAbstractItemView::ScrollPerPixel</enum>
+      </property>
+      <property name="rootIsDecorated">
+       <bool>false</bool>
+      </property>
+      <property name="uniformRowHeights">
+       <bool>true</bool>
+      </property>
+      <property name="itemsExpandable">
+       <bool>false</bool>
+      </property>
+      <property name="allColumnsShowFocus">
+       <bool>true</bool>
+      </property>
+      <property name="expandsOnDoubleClick">
+       <bool>false</bool>
+      </property>
+      <column>
+       <property name="text">
+        <string>App Name</string>
+       </property>
+       <property name="font">
+        <font>
+         <family>Segoe UI</family>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>App Path</string>
+       </property>
+       <property name="font">
+        <font>
+         <family>Segoe UI</family>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+      </column>
+     </widget>
+    </item>
+    <item row="3" column="3">
+     <widget class="QTreeWidget" name="treeview_grouplist">
+      <property name="minimumSize">
+       <size>
+        <width>165</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>165</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <property name="font">
+       <font>
+        <family>Segoe UI</family>
+       </font>
+      </property>
+      <property name="contextMenuPolicy">
+       <enum>Qt::ActionsContextMenu</enum>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::NoFrame</enum>
+      </property>
+      <property name="horizontalScrollBarPolicy">
+       <enum>Qt::ScrollBarAlwaysOff</enum>
+      </property>
+      <property name="editTriggers">
+       <set>QAbstractItemView::NoEditTriggers</set>
+      </property>
+      <property name="dragDropMode">
+       <enum>QAbstractItemView::InternalMove</enum>
+      </property>
+      <property name="alternatingRowColors">
+       <bool>true</bool>
+      </property>
+      <property name="textElideMode">
+       <enum>Qt::ElideNone</enum>
+      </property>
+      <property name="verticalScrollMode">
+       <enum>QAbstractItemView::ScrollPerPixel</enum>
+      </property>
+      <property name="rootIsDecorated">
+       <bool>false</bool>
+      </property>
+      <property name="uniformRowHeights">
+       <bool>true</bool>
+      </property>
+      <property name="itemsExpandable">
+       <bool>false</bool>
+      </property>
+      <property name="allColumnsShowFocus">
+       <bool>true</bool>
+      </property>
+      <property name="expandsOnDoubleClick">
+       <bool>false</bool>
+      </property>
+      <column>
+       <property name="text">
+        <string>App Groups</string>
+       </property>
+       <property name="font">
+        <font>
+         <family>Segoe UI</family>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+      </column>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>537</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuHelp">
+    <property name="font">
+     <font>
+      <family>Segoe UI</family>
+     </font>
+    </property>
+    <property name="title">
+     <string>Help</string>
+    </property>
+    <addaction name="menu_about"/>
+    <addaction name="menu_dbdesign"/>
+    <addaction name="menu_whatsnew"/>
+    <addaction name="separator"/>
+    <addaction name="menu_wipealldata"/>
+    <addaction name="separator"/>
+    <addaction name="menu_aboutqt"/>
+   </widget>
+   <widget class="QMenu" name="menuFile">
+    <property name="font">
+     <font>
+      <family>Segoe UI</family>
+     </font>
+    </property>
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="menu_importdatabase"/>
+    <addaction name="menu_exportdatabase"/>
+    <addaction name="separator"/>
+    <addaction name="menu_savewindowsize"/>
+    <addaction name="separator"/>
+    <addaction name="menu_exit"/>
+   </widget>
+   <widget class="QMenu" name="menuView">
+    <property name="font">
+     <font>
+      <family>Segoe UI</family>
+     </font>
+    </property>
+    <property name="title">
+     <string>Tools</string>
+    </property>
+    <addaction name="menu_selectallbydefault"/>
+    <addaction name="menu_hideonfocusloss"/>
+    <addaction name="menu_enablekeyboardshortcut"/>
+    <addaction name="menu_startatboot"/>
+    <addaction name="separator"/>
+    <addaction name="menu_findreplace"/>
+    <addaction name="menu_setwindowopacity"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuView"/>
+   <addaction name="menuHelp"/>
+  </widget>
+  <action name="menu_aboutqt">
+   <property name="icon">
+    <iconset resource="launcher_3x.qrc">
+     <normaloff>:/Qt.png</normaloff>:/Qt.png</iconset>
+   </property>
+   <property name="text">
+    <string>About Qt</string>
+   </property>
+   <property name="font">
+    <font>
+     <family>Segoe UI</family>
+    </font>
+   </property>
+  </action>
+  <action name="menu_exit">
+   <property name="icon">
+    <iconset resource="launcher_3x.qrc">
+     <normaloff>:/start-here.svg</normaloff>:/start-here.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Exit</string>
+   </property>
+   <property name="font">
+    <font>
+     <family>Segoe UI</family>
+    </font>
+   </property>
+  </action>
+  <action name="menu_dbdesign">
+   <property name="icon">
+    <iconset resource="launcher_3x.qrc">
+     <normaloff>:/database.png</normaloff>:/database.png</iconset>
+   </property>
+   <property name="text">
+    <string>DB Schema</string>
+   </property>
+   <property name="font">
+    <font>
+     <family>Segoe UI</family>
+    </font>
+   </property>
+  </action>
+  <action name="menu_about">
+   <property name="icon">
+    <iconset resource="launcher_3x.qrc">
+     <normaloff>:/help-contents.svg</normaloff>:/help-contents.svg</iconset>
+   </property>
+   <property name="text">
+    <string>About</string>
+   </property>
+   <property name="font">
+    <font>
+     <family>Segoe UI</family>
+    </font>
+   </property>
+  </action>
+  <action name="menu_selectallbydefault">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Select All by Default</string>
+   </property>
+   <property name="font">
+    <font>
+     <family>Segoe UI</family>
+    </font>
+   </property>
+  </action>
+  <action name="menu_startatboot">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Start at Boot</string>
+   </property>
+   <property name="font">
+    <font>
+     <family>Segoe UI</family>
+    </font>
+   </property>
+  </action>
+  <action name="menu_exportdatabase">
+   <property name="icon">
+    <iconset resource="launcher_3x.qrc">
+     <normaloff>:/022.png</normaloff>:/022.png</iconset>
+   </property>
+   <property name="text">
+    <string>Export Database</string>
+   </property>
+   <property name="font">
+    <font>
+     <family>Segoe UI</family>
+    </font>
+   </property>
+  </action>
+  <action name="menu_importdatabase">
+   <property name="icon">
+    <iconset resource="launcher_3x.qrc">
+     <normaloff>:/03.png</normaloff>:/03.png</iconset>
+   </property>
+   <property name="text">
+    <string>Import Database</string>
+   </property>
+   <property name="font">
+    <font>
+     <family>Segoe UI</family>
+    </font>
+   </property>
+  </action>
+  <action name="menu_whatsnew">
+   <property name="icon">
+    <iconset resource="launcher_3x.qrc">
+     <normaloff>:/changelog.png</normaloff>:/changelog.png</iconset>
+   </property>
+   <property name="text">
+    <string>Release Notes</string>
+   </property>
+   <property name="font">
+    <font>
+     <family>Segoe UI</family>
+    </font>
+   </property>
+  </action>
+  <action name="menu_hideonfocusloss">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Hide Window on Focus Loss</string>
+   </property>
+   <property name="font">
+    <font>
+     <family>Segoe UI</family>
+    </font>
+   </property>
+  </action>
+  <action name="menu_wipealldata">
+   <property name="icon">
+    <iconset resource="launcher_3x.qrc">
+     <normaloff>:/dialog-warning.svg</normaloff>:/dialog-warning.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Wipe All Data!</string>
+   </property>
+   <property name="font">
+    <font>
+     <family>Segoe UI</family>
+    </font>
+   </property>
+  </action>
+  <action name="menu_enablekeyboardshortcut">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Enable Keyboard Shortcuts</string>
+   </property>
+   <property name="font">
+    <font>
+     <family>Segoe UI</family>
+    </font>
+   </property>
+  </action>
+  <action name="menu_savewindowsize">
+   <property name="icon">
+    <iconset resource="launcher_3x.qrc">
+     <normaloff>:/geometry.svg</normaloff>:/geometry.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Save Geometry</string>
+   </property>
+   <property name="font">
+    <font>
+     <family>Segoe UI</family>
+    </font>
+   </property>
+  </action>
+  <action name="menu_setwindowopacity">
+   <property name="icon">
+    <iconset resource="launcher_3x.qrc">
+     <normaloff>:/opacity.svg</normaloff>:/opacity.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Window Opacity</string>
+   </property>
+   <property name="font">
+    <font>
+     <family>Segoe UI</family>
+    </font>
+   </property>
+  </action>
+  <action name="menu_findreplace">
+   <property name="icon">
+    <iconset resource="launcher_3x.qrc">
+     <normaloff>:/find-replace.png</normaloff>:/find-replace.png</iconset>
+   </property>
+   <property name="text">
+    <string>Find/Replace</string>
+   </property>
+  </action>
+ </widget>
+ <tabstops>
+  <tabstop>button_selectall</tabstop>
+  <tabstop>button_invert</tabstop>
+  <tabstop>button_selectnone</tabstop>
+  <tabstop>button_addgroup</tabstop>
+  <tabstop>button_saveedits</tabstop>
+  <tabstop>slider_opacity</tabstop>
+ </tabstops>
+ <resources>
+  <include location="launcher_3x.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>slider_opacity</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>lcd_opacity</receiver>
+   <slot>display(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>411</x>
+     <y>92</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>499</x>
+     <y>92</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>menuBar</receiver>
+   <slot>setVisible(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>22</x>
+     <y>41</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>20</x>
+     <y>9</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

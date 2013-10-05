@@ -1,0 +1,32 @@
+<RCC>
+  <qresource>
+    <file>app.png</file>
+    <file>addapp.png</file>
+    <file>find-replace.png</file>
+    <file>geometry.svg</file>
+    <file>all.png</file>
+    <file>addgroup.png</file>
+    <file>none.png</file>
+    <file>help-contents.svg</file>
+    <file>ccsm.svg</file>
+    <file>opacity.svg</file>
+    <file>teamviewer.svg</file>
+    <file>dbschema.png</file>
+    <file>03.png</file>
+    <file>dialog-warning.svg</file>
+    <file>022.png</file>
+    <file>utilities-terminal.svg</file>
+    <file>changelog.png</file>
+    <file>launchall.svg</file>
+    <file>app.png</file>
+    <file>launcher.png</file>
+    <file>folder.png</file>
+    <file>inverse.png</file>
+    <file>database.png</file>
+    <file>start-here.svg</file>
+    <file>Qt.png</file>
+    <file>separator.png</file>
+    <file>deletehere.png</file>
+    <file>deleteeverywhere.png</file>
+  </qresource>
+</RCC>

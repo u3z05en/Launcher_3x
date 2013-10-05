@@ -1,0 +1,64 @@
+self.Links=            [ITEMID, GROUPID, SEQ]
+self.Groups=           [GROUPID, NAME, SEQ, DATE]
+self.Apps=             [SEQ, NAME, PATH, ITEMID]
+self.currentGroup=     [GROUPID, NAME]
+GUIapps =              [NAME, PATH, ITEMID]
+GUIgroups =            [NAME, GROUPID]
+
+Detect Change in GUI LIST (compare known list against current layout)
+If Changed
+	Get list of unique ID in GUI LIST (in order)
+	
+--------------------------------------
+## STARTUP
+check db file
+	if not there, create it
+		run schema
+		get first Group name
+	if there, point to it
+
+Load Links
+create 1 list of lists self.links[seq, item, group]
+
+Load groups
+use DB seq number
+	create 1 list of lists self.groups[seq, name]
+set self.currentGroup
+
+Load items (order as by Item_Seq)
+use self.currentGroup
+	create 1 list of lists self.items[seq, name, path]
+
+## TRIGGERS
+# Add Item Button
+Open new form window and get inputs.
+
+# Group dragged and dropped
+
+
+# Group switched
+
+
+# Group right clicked
+Menu: Remove, Launch
+
+
+# Item edited inline
+
+
+# Item dragged and dropped
+
+
+# Item Right Clicked
+Menu: Remove, (Add to: -> Group List (excluding current))
+
+
+# Launch Item(s)
+Launch selected items, with filtering.
+
+## Menus
+# Item Menu
+Delete
+
+# Group Menu
+Delete
